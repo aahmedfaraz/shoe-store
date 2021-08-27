@@ -6,6 +6,7 @@ import { Breadcrumbs, Grid, Typography, Button } from '@material-ui/core';
 import { NavigateNext } from '@material-ui/icons';
 // Routing elements
 import { Link, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 // Context
 import globalContext from '../../context/global/globalContext';
 
@@ -15,14 +16,23 @@ const ProductDetails = () => {
     // Get function to set current
     const { current, setCurrent } = useContext(globalContext);
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         // Use function and slug to set current
         setCurrent(slug);
+        // Check if wrong product is entered in URL
+        if(current !== null){
+            if(current.name === null){
+                // Navigate to Page not found
+                navigate('/page-not-found');
+            }
+        }
         // eslint-disable-next-line
-    }, [])
+    }, [current])
 
     if(current === null) return null;
-    
+
     const { name, image, price } = current;
     
     return (

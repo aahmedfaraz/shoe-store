@@ -73,7 +73,17 @@ const GlobalState = props => {
     const [state, dispatch] = useReducer(globalReducer, initialState)
 
     const setCurrent = slug => {
-        const selectedShoe = state.shoes.filter(shoe => shoe.slug === slug)[0];
+        let selectedShoe = state.shoes.filter(shoe => shoe.slug === slug)[0];
+        try {
+            selectedShoe = selectedShoe.name !== null && selectedShoe;
+        } catch (error) {
+            selectedShoe = {
+                name: null,
+                image: null,
+                price: null,
+                slug: null
+            }
+        }
         dispatch({
             type: SET_CURRENT,
             payload: selectedShoe
