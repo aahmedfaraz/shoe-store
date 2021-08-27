@@ -1,0 +1,43 @@
+.breakcrumbsContainer {
+  padding: 5px;
+}
+
+.breakcrumbsContainer a {
+  color: black;
+  text-decoration: none;
+}
+
+.grid {
+  box-shadow: 0 0 3px rgba(128, 128, 128, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 70% !important;
+  align-self: center;
+  justify-self: center;
+  margin: 10px auto;
+}
+
+@media (max-width: 500px) {
+  .grid {
+    width: 90% !important;
+  }
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(236, 236, 236);
+  color: rgb(44, 44, 44);
+}
+
+.gridItem:nth-of-type(2) {
+  padding: 20px 30px;
+}
+
+.gridItem img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}

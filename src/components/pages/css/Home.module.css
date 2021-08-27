@@ -1,0 +1,26 @@
+.container {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.heading {
+  text-shadow: 0 0 10px black, 3px 4px 0 rgba(155, 155, 155, 0.8);
+}
+
+.button {
+  color: white !important;
+  border-color: white !important;
+}
+
+@media (max-width: 500px) {
+  .button {
+    color: rgb(31, 31, 31) !important;
+    border-color: rgb(31, 31, 31) !important;
+    box-shadow: 0 0 5px rgb(124, 124, 124);
+  }
+}

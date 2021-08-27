@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap");
+
+.appBar {
+  background-color: rgb(27, 27, 27) !important;
+  display: flex;
+  justify-content: center;
+  height: 60px !important;
+}
+
+.title {
+  font-family: "Charmonman", cursive !important;
+  padding-top: 3px !important;
+  font-size: 25px !important;
+}
+
+.title > span {
+  color: rgb(177, 177, 177) !important;
+}
+
+.menu {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: calc(100vh - 60px);
+  background-color: rgb(39, 39, 39);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  max-width: 100%;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  z-index: 20;
+}
+
+.display {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.menu a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid rgb(88, 88, 88);
+}
+
+.menu a:hover {
+  background-color: rgb(49, 49, 49);
+}
+
+.active::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 1px;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(110, 110, 110);
+}
+
+.menu p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  content: "Developed By Ahmed Faraz";
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu p img {
+  width: 35px;
+  height: 35px;
+  margin-top: 5px;
+}
