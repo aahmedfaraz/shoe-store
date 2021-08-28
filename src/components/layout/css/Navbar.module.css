@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap");
 
 .appBar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
   background-color: rgb(27, 27, 27) !important;
   display: flex;
   justify-content: center;
@@ -19,14 +22,13 @@
 
 .menu {
   position: fixed;
-  top: 60px;
   left: 0;
-  height: calc(100vh - 60px);
+  /* height: calc(100vh - 60px); */
   background-color: rgb(39, 39, 39);
   color: white;
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 400px;
   max-width: 100%;
   transform: translateX(-100%);
   opacity: 0;
@@ -37,6 +39,7 @@
 .display {
   transform: translateX(0);
   opacity: 1;
+  overflow: hidden;
 }
 
 .menu a {

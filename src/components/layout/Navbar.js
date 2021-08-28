@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './css/Navbar.module.css';
 import ahmedFarazIcon from '../../assets/images/ahmedfaraz-icon.png';
 // Material-ui components
@@ -73,8 +73,13 @@ const Navbar = () => {
 
   const onSelect = () => setDisplay(false);
 
+  useEffect(() => {
+    document.getElementById('menu').style.height = `calc(100vh - ${document.getElementById('appbar').clientHeight}px)`;
+    document.getElementById('menu').style.top = `${document.getElementById('appbar').clientHeight}px`;
+  }, [])
+
   return (
-      <AppBar position="static" className={styles.appBar} >
+      <AppBar id="appbar" position="static" className={styles.appBar} >
         <Toolbar>
           <IconButton
             edge="start"
@@ -104,7 +109,7 @@ const Navbar = () => {
             />
           </div>
         </Toolbar>
-        <ul className={`${styles.menu} ${display && styles.display}`}>
+        <ul id="menu" className={`${styles.menu} ${display && styles.display}`}>
           <Link onClick={onSelect} to="/" className={`${styles.a} ${ useMatch('/') && styles.active }`}>Home</Link>
           <Link onClick={onSelect} to="products" className={`${styles.a} ${ useMatch('products') && styles.active }`}>Products</Link>
           <p>Developed by Ahmed Faraz <img src={ahmedFarazIcon} alt="ahmedfaraz-icon" /></p>
