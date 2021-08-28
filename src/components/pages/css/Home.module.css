@@ -21,6 +21,6 @@
   .button {
     color: rgb(31, 31, 31) !important;
     border-color: rgb(31, 31, 31) !important;
-    box-shadow: 0 0 5px rgb(124, 124, 124);
+    background-color: rgba(221, 221, 221, 0.479) !important;
   }
 }
