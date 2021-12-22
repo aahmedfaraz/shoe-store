@@ -10,7 +10,7 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
-  background-image: url("https://static.highsnobiety.com/thumbor/F3Ic6BEcOPg-iNu9612n5-C5SSw=/1200x800/static.highsnobiety.com/wp-content/uploads/2019/05/25164407/nike-air-max-plus-3-release-date-price-004.jpg");
+  background-image: url("./assets/images/bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
